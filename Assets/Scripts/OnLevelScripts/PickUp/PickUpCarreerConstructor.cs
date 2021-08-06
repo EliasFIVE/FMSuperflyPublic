@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpCarreerConstructor : MonoBehaviour
@@ -8,36 +9,38 @@ public class PickUpCarreerConstructor : MonoBehaviour
     [SerializeField] private PickUpSetter fuelPickUp;
     [SerializeField] private PickUpSetter bananPickUp;
 
-    private MaterialSetter balloon;
-
-    private void Awake()
-    {
-        balloon = GetComponentInChildren<MaterialSetter>();
-    }
-
     private void OnEnable()
     {
         DeactivateAllPickUps();
     }
 
+
     public void ConstructBadPickUp()
     {
-        balloon.SetMaterial(badPickUp.PickUpSettings.CarreerMaterial);
+        SetMaterials(badPickUp.PickUpSettings.CarreerMaterial);
         badPickUp.gameObject.SetActive(true);
     }
 
     public void ConstructBananaPickUp()
     {
-        balloon.SetMaterial(bananPickUp.PickUpSettings.CarreerMaterial);
+        SetMaterials(bananPickUp.PickUpSettings.CarreerMaterial);
         bananPickUp.gameObject.SetActive(true);
     }
 
     public void ConstructFuelPickUp()
     {
-        balloon.SetMaterial(fuelPickUp.PickUpSettings.CarreerMaterial);
+        SetMaterials(fuelPickUp.PickUpSettings.CarreerMaterial);
         fuelPickUp.gameObject.SetActive(true);
     }
 
+    private void SetMaterials(Material material)
+    {
+        var balloons = GetComponentsInChildren<MaterialSetter>();
+        foreach (var balloon in balloons)
+        {
+            balloon.SetMaterial(material);
+        }
+    }
     private void DeactivateAllPickUps()
     {
         badPickUp.gameObject.SetActive(false);

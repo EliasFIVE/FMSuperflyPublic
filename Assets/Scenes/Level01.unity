@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudsSpeed: 5
-  cloudsDensityTrashhold: 0.5
+  cloudsDensityTrashhold: 0.3
 --- !u!1001 &131046798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudsSpeed: 2
-  cloudsDensityTrashhold: 0.7
+  cloudsDensityTrashhold: 0.4
 --- !u!1001 &1118724570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1250,7 +1250,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 66
   orthographic: 0
   orthographic size: 5
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudsSpeed: 3
-  cloudsDensityTrashhold: 0.2
+  cloudsDensityTrashhold: 0.1
 --- !u!1 &1904166338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudsSpeed: 1
-  cloudsDensityTrashhold: 0.8
+  cloudsDensityTrashhold: 0.3
 --- !u!1 &2045189958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   initialFuel: 50
   maximumFuel: 100
   alarmFuelValue: 10
-  "fuel\u0421onsumptionPerSecond": 1
+  "fuel\u0421onsumptionPerSecond": 0
   fuel: 0
   FuelChangeEvent:
     m_PersistentCalls:
